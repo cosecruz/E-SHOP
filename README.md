@@ -1,2 +1,4 @@
 # E-SHOP
-Its a delivering web page
+
+
+cosecruz here I just decided that it was not necessary to add a description.
