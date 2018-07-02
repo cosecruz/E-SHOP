@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/ /EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+
+        <title>E-SHOP</title>
+        <link rel="icon" href="Images/smalllogo.png"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+
+            .btn {
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
+
+            body {
+                background-image: url("Images/shoe.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% 1080px;
+
+            }
+
+            .link:hover{
+                background: url('Images/home(2).png"') no-repeat top;
+                background-size: 5% 30px;
+
+            }
+            .icon {
+                position: relative;
+
+                top: 5px;
+                right: 5px;
+            }
+            input[type=text] {
+                width: 130px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('Images/searchicon.png');
+                background-position: 10px 10px; 
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+            }
+
+            input[type=text]:focus {
+                width: 70%;
+            }
+            .dropbtn {
+                background-color:gray; 
+                color: cyan;
+                padding: 10px;
+                font-size: 20px;
+                border: none;
+            }
+
+            .dropdown {
+                position: relative;
+                display: list-item;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: black;
+                min-width: 300px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color:cyan;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {background-color: #ddd;}
+
+            .dropdown:hover .dropdown-content {display: block;}
+
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+            .droprightbtn {
+                background-color:black; 
+                color: cyan;
+                padding: 10px;
+                font-size: 20px;
+                border: none;
+            }
+
+            .dropright {
+                position: relative;
+                display: list-item;
+            }
+
+            .dropright-content {
+                display: none;
+                position: absolute;
+                background-color: gray;
+                min-width: 1000px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropright-content a {
+                color:cyan;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropright-content a:hover {background-color: white;}
+
+            .dropright:hover .dropright-content {display: block;}
+
+            .dropright:hover .droprightbtn {background-color: #3e8e41;}
+
+
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <table bgcolor="black"  width='100%' height='150' border='0' align='center'>
+                <tr>
+
+                    <td>
+                        <h:commandLink action="StartupPage" >
+                            <h:graphicImage url="Images/logo2.png" width='400' height='150'/>
+                        </h:commandLink>
+
+                    </td>
+                    <td>
+                        <form>
+                            <input type="text" name="search" placeholder="Search for products, brands and categories.."/>
+                        </form>
+                    </td>    
+                </tr>
+                <tr>
+                    <td>
+                        <h:commandLink action="AdminPage" value="ADMIN" style="font-family: Allan; text-decoration:cyan; color:cyan; font-size: 15px" >
+                            &nbsp;<h:graphicImage url="Images/admin.png" width='15' height='15'/>
+                        </h:commandLink>
+                    </td>
+                </tr>
+
+            </table>
+            <table  bgcolor="gray"  width='50%' height='50' border='0' align='right' >
+                <tr align="right">
+
+                    <td  align="right" width="3%">
+
+                        <h:commandLink action="CartPage" >
+                            <h:graphicImage url="Images/cart.png" width='15' height='15'/>
+                        </h:commandLink>
+
+                    </td>
+                    <td align="right" width="3%">
+
+                        <h:commandLink action="SignupPage" >
+                            <h:graphicImage url="Images/admin.png" width='15' height='15'/>
+                        </h:commandLink>
+
+                    </td>
+                </tr>
+
+
+            </table>
+            <table  bgcolor="gray"  width='50%' height='50' border='0' align='left' >
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <div align="left" width="5%"><button class="dropbtn"><i class="fa fa-bars"></i></button></div>
+                            <div class="dropdown-content">
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/pandt.png"/>&nbsp;Phones and Tablet</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Church</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/tande.png"/>&nbsp;Tv and Electronics</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/fashion.png"/>&nbsp;Fashion</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/computing.png"/>&nbsp;Computing</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/grocery.png"/>&nbsp;Groceries</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/handb.png"/>&nbsp;Health and Beauty</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/bkandt.png"/>&nbsp;Baby, Kids and Toys</a>                                
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/hando.png"/>&nbsp;Home and Office</a>                                
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/gandc.png"/>&nbsp;Games and Consoles</a>                                
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/wands.png"/>&nbsp;Watches and Sunglasses</a>                               
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/automobiles.png"/>&nbsp;Automobiles</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="0" bgcolor="black" height="10px" width="250px">
+                                    <tr>
+                                        <td align="left">
+                                            <a href="#"><img src="Images/categories.png"/>&nbsp;Other Categories</a>
+                                        </td>
+                                        <td align="right">
+                                            <div class="dropright">
+                                                <button class="droprightbtn"><i class="fa fa-angle-right" style="font-size:20px;color:cyan"></i></button>
+                                                <div align="left" class="dropright-content">
+                                                    <a  href="#"> Mountain</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="right">
+                        <div>
+                            <img src="Images/head.jpg"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table  bgcolor="gainsboro"  width='90%' height='850' border='0' align='center' cellspacing="20">
+            </table>
+        </h:form>
+    </h:body>
+</html>
+
