@@ -42,9 +42,9 @@ Contributor(s):
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/FlightBooking</property>
-    <property name="hibernate.connection.username">samuel</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eshop</property>
+    <property name="hibernate.connection.username">ebuka</property>
     <property name="hibernate.connection.password">samuel205</property>
   </session-factory>
 </hibernate-configuration>
