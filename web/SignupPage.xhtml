@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/ /EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+
+        <title>E-SHOP</title>
+        <link rel="icon" href="Images/smalllogo.png"></link>
+        <link href="CSS/bgEdit.css"/> 
+
+        <style>
+
+
+
+            body {
+                background-image: url("Images/shoe.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% 1080px;
+
+            }
+            .tab {
+                border-radius: 0px 36px 36px 36px;
+                box-shadow: 6px 21px 50px 12px rgba(105,105,105,1);
+            }
+            .header{
+                background-color: cyan;
+
+            }
+            .headersub{
+                background-color: gray;
+                width:500px;
+                height:30px;
+            }
+
+            .fields-main {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+            }
+            .fields {
+                flex-basis: 49%;
+                -webkit-flex-basis: 49%;
+            }
+            .input {
+                width: 500px;
+                height: 35px;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+            }
+            .btnheader{
+                background-color: cyan;
+                width:500px;
+                height: 30px;
+                border-radius: 0px 36px 36px 36px;
+            }
+            .btnheader:hover{
+                background-color: gray;
+                width:700px;
+                height: 30px;
+                box-shadow: 6px 21px 50px 12px rgba(105,105,105,1);
+            }
+            
+            .closetab{
+                border-radius: 200px 200px 200px 200px;
+                background: -moz-linear-gradient(45deg, rgba(52,247,137,1) 0%, rgba(93,240,228,0.92) 50%, rgba(12,245,233,0.91) 51%, rgba(24,128,240,0.88) 71%, rgba(39,77,230,0.83) 100%);
+            }
+            .closetab:hover{
+                border-radius: 200px 200px 200px 200px;
+                box-shadow: 9px 9px 43px 2px rgba(29,65,82,1);
+                background: -moz-linear-gradient(-45deg, rgba(52,247,137,1) 0%, rgba(93,240,228,0.92) 50%, rgba(12,245,233,0.91) 51%, rgba(24,128,240,0.88) 71%, rgba(39,77,230,0.83) 100%);
+            }
+
+
+        </style>
+    </h:head>
+    <h:body>
+        <table  width="100%" height="100">
+            <h:form>
+                <tr>
+                    <td align="right">
+                        <table class="closetab">
+                            <tr>
+                                <td>
+                                    <h:commandLink action="StartupPage">
+                                        <h:graphicImage url="Images/close.png" width='40' height='25'/>
+                                    </h:commandLink>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </h:form>
+        </table>
+        <table  bgcolor="gainsboro"  width='70%' height='700' border='0' align='center' cellspacing="20" class="tab">
+            <tr>
+                <td align="center" valign="top" height="10" class='header'>
+                    <h1>REGISTER</h1>
+
+                </td>
+            </tr>
+            <h:form>
+                <tr>
+                    <td align='center' valign='top'>
+                        <div class='fields-main'>
+                            <div class='fields'>
+                                <div class='headersub'><h2> FIRST NAME</h2></div>
+                                <h:inputText value="#{signUp.firstName}" class='input'/>
+                            </div>
+                            <div class='fields'>
+                                <div class='headersub'><h2>LAST NAME</h2></div>
+                                <h:inputText value="#{signUp.lastName}" class='input'/>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align='center' valign='top'>
+                        <div class='fields-main'>
+                            <div class='fields'>
+                                <div class='headersub'><h2> PHONE NUMBER</h2></div>
+                                <h:inputText value="#{signUp.number}" class='input'/>
+                            </div>
+                            <div class='fields'>
+                                <div class='headersub'><h2>D-O-B</h2></div>
+                                <h:inputText value="#{signUp.dateOfBirth}" class='input'/>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align='center' valign='top'>
+                        <div class='fields-main'>
+                            <div class='fields'>
+                                <div class='headersub'><h2> PASSWORD</h2></div>
+                                <h:inputSecret value="#{signUp.password}" class='input'/>
+                            </div>
+                            <div class='fields'>
+                                <div class='headersub'><h2>CONFIRM PASSWORD</h2></div>
+                                <h:inputSecret value="#{signUp.cPassword}" class='input'/>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align='center' valign='top'>
+                        <div class='fields-main'>
+                            <div class='fields'>
+                                <div class='headersub'><h2> GENDER</h2></div>
+                                <h:inputText value="#{signUp.gender}" class='input'/>
+                            </div>
+                            <div class='fields'>
+                                <div class='headersub'><h2> E-MAIL</h2></div>
+                                <h:inputText value="#{signUp.email}" class='input'/>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <h:commandButton value="Sign Up" style="font-family: Allan; text-decoration:cyan; color:black; font-size: 25px; font-weight: bold" action="#{signUp.signUp}" styleClass="btnheader" />
+                    </td>
+                </tr>
+
+            </h:form>
+        </table>
+    </h:body>
+</html>
+
