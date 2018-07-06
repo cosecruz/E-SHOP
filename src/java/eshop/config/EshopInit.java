@@ -21,11 +21,9 @@ public class EshopInit extends FacesInitializer implements WebApplicationInitial
 
     @Override
     public void onStartup(ServletContext sc) throws ServletException {
-        
+
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
         appContext.register(EshopConfig.class, HibernateConfig.class);
         sc.addListener(new ContextLoaderListener(appContext));
     }
 }
-    
-

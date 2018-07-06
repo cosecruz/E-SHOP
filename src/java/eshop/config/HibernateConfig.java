@@ -8,9 +8,9 @@ package eshop.config;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.hibernate.SessionFactory;
-import static org.hibernate.cfg.AvailableSettings.DIALECT; 
-import static org.hibernate.cfg.AvailableSettings.HBM2DDL_AUTO; 
-import static org.hibernate.cfg.AvailableSettings.SHOW_SQL; 
+import static org.hibernate.cfg.AvailableSettings.DIALECT;
+import static org.hibernate.cfg.AvailableSettings.HBM2DDL_AUTO;
+import static org.hibernate.cfg.AvailableSettings.SHOW_SQL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,19 +33,19 @@ public class HibernateConfig {
 
   @Autowired
   private Environment env;
-  
-  
+
+
 
   @Bean
   public DataSource getDataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
-    
+
     // Setting JDBC properties
     dataSource.setDriverClassName(env.getProperty("db.driver"));
     dataSource.setUrl(env.getProperty("db.url"));
     dataSource.setUsername(env.getProperty("db.username"));
     dataSource.setPassword(env.getProperty("db.password"));
-    
+
     return dataSource;
   }
 
@@ -72,4 +72,3 @@ public class HibernateConfig {
     return txManager;
   }
 }
-

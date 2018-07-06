@@ -12,5 +12,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan(basePackages="eshop")
 public class EshopConfig {
-    
+
 }
